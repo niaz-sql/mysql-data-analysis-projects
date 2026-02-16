@@ -124,22 +124,55 @@ FROM all_rows
 
 -- Calculate the total amount spent by each customer
 
+SELECT *
+FROM customers;
+
 
 -- View the data needed from the orders table
-
+SELECT customer_id, product_id, units
+FROM orders
 
 -- View the data needed from the products table
-
+SELECT product_id, unit_price
+FROM products
 
 -- Combine the two tables and view the columns of interest
+SELECT o.customer_id, o.product_id, (o.units * p.unit_price) AS price_spent
+FROM orders AS o
+INNER JOIN products AS p
+ON o.product_id = p.product_id
 
         
 -- Calculate the total spending by each customer and sort the results from highest to lowest
-
+SELECT o.customer_id, SUM(o.units * p.unit_price) AS total_spent
+FROM orders AS o
+INNER JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY o.customer_id
+ORDER BY total_spent DESC
 
 -- Turn the query into a CTE and apply the percentile calculation
+WITH total_spent_calc AS (SELECT o.customer_id, SUM(o.units * p.unit_price) AS total_spent
+FROM orders AS o
+INNER JOIN products AS p
+ON o.product_id = p.product_id
+GROUP BY o.customer_id)
+SELECT customer_id, total_spent,
+NTILE (100) OVER (ORDER BY total_spent DESC) AS ntile_calc
+FROM total_spent_calc
 
 
 -- Return the top 1% of customers in terms of spending
+WITH total_spent_calc AS (SELECT o.customer_id, SUM(o.units * p.unit_price) AS total_spent
+							FROM orders AS o
+							INNER JOIN products AS p
+							ON o.product_id = p.product_id
+							GROUP BY o.customer_id),
+ ranking AS (SELECT customer_id, total_spent,
+							NTILE (100) OVER (ORDER BY total_spent DESC) AS ntile_calc
+							FROM total_spent_calc)
+                            SELECT *
+                            FROM ranking
+                            WHERE ntile_calc = 1
 
 
