@@ -1,5 +1,5 @@
 
-⚾ Advanced MySQL Analytics Project
+# ⚾ Advanced MySQL Analytics Project
 School, Salary & Player Career Analysis
 📌 Project Overview
 
@@ -9,7 +9,7 @@ The goal was to analyze historical player, team, school, and salary data to unco
 
 All analysis was performed using advanced SQL only, without external analytics tools.
 
-🧠 Skills & Techniques Demonstrated
+###  Skills & Techniques Demonstrated
 
 ✅ CTEs (Common Table Expressions)
 
@@ -31,8 +31,8 @@ All analysis was performed using advanced SQL only, without external analytics t
 
 ✅ Business-Oriented SQL Analysis
 
-📂 Project Breakdown
-🎓 PART I — School Analysis
+## 📂 Project Breakdown
+### 🎓PART I 🎓School Analysis
 Key Questions Solved
 
 Reviewed school and school details tables
@@ -53,7 +53,7 @@ DENSE_RANK() for Top-N per group
 
 CTE structuring
 
-💰 PART II — Salary Analysis
+### 🎓 PART II Salary Analysis
 Key Questions Solved
 
 Explored team salary data
@@ -74,7 +74,7 @@ Threshold milestone detection
 
 Window function partitioning
 
-🧑‍💼 PART III — Player Career Analysis
+### 🧑‍💼 PART III — Player Career Analysis
 Key Questions Solved
 
 Counted total players in the dataset
@@ -105,7 +105,7 @@ Career duration logic
 
 Conditional filtering
 
-📊 PART IV — Player Comparison Analysis
+### 📊 PART IV — Player Comparison Analysi
 Key Questions Solved
 
 Identified players sharing the same birthday
@@ -132,7 +132,7 @@ Trend analysis
 
 Grouped aggregations
 
-📈 Analytical Highlights
+# 📈 Analytical Highlights
 
 ✔ Implemented scalable SQL pipelines
 ✔ Solved real-world percentile problems
@@ -156,13 +156,13 @@ sample_queries.sql → Core analytical queries
 
 full_dataset.sql → Complete dataset (large file; may not preview on GitHub)
 
-⚙️ Requirements
+### ⚙️ Requirements
 
 MySQL 8+
 
 Window function support enabled
 
-🚀 How to Run This Project
+### 🚀 How to Run This Project
 
 Create a new MySQL database
 
@@ -172,7 +172,7 @@ Import data using full_dataset.sql
 
 Execute queries from sample_queries.sql
 
-💼 Real-World Relevance
+### 💼 Real-World Relevance
 
 This project simulates practical data analytics tasks such as:
 
@@ -198,6 +198,6 @@ Sports Analytics
 
 Freelance SQL Consulting
 
-🎯 Author Note
+# 🎯 Author Note
 
 This project demonstrates advanced SQL capabilities suitable for real-world analytical problem solving and freelance data work.
