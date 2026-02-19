@@ -20,7 +20,7 @@
 ✔️ This project demonstrates practical SQL skills applied to a real-world business scenario.*
 
 ## 🗂 Dataset Tables
-📋 menu_items
+***📋 menu_items***
 
 Contains details of all dishes available on the menu:
 
@@ -32,7 +32,7 @@ category
 
 price
 
-🧾 order_details
+***🧾 order_details***
 
 Contains transactional records of customer orders:
 
@@ -61,7 +61,7 @@ Gain insights into menu composition and pricing.
 
 ✔️ What is the average price per category?
 
-🔥Techniques Used
+**🔥Techniques Used**
 
 👉COUNT(), MIN(), MAX(), AVG()
 
@@ -85,7 +85,7 @@ Understand order volume and item distribution.
 
 ✔️ How many orders included more than 12 items?
 
-🔥Techniques Used
+**🔥Techniques Used**
 
 👉Date aggregation
 
@@ -113,7 +113,7 @@ Combine menu and order data to analyze purchasing trends.
 
 ✔️ Examine items in the single highest-spend order
 
-🔥Techniques Used
+**🔥Techniques Used**
 
 👉INNER JOIN
 
@@ -181,4 +181,5 @@ Run queries from  Solution.sql
 # 👨‍💻 Author
 
 niaz-sql
-SQL Learner | Aspiring Data Analyst
+
+**SQL Learner | Aspiring Data Analyst**
